@@ -71,58 +71,67 @@ h1, h2, h3 {
 
 /* line 21, ../sass/screen.scss */
 h1 {
-  font-size: 2.2em;
-  margin-bottom: 24px; }
+  font-size: 2.2em; }
 
-/* line 26, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 h2 {
   font-size: 1.5em;
   opacity: 0.5; }
 
-/* line 31, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
+a {
+  color: inherit; }
+
+/* line 34, ../sass/screen.scss */
 p {
   margin-bottom: 12px; }
 
-/* line 35, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 section {
   padding-top: 1em; }
+  /* line 41, ../sass/screen.scss */
+  section img {
+    max-width: 100%; }
 
-/* line 39, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 body > section, body > header, body > footer {
   width: 960px;
   margin: 0 auto;
   margin-bottom: 20px; }
 
-/* line 46, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-  /* line 51, ../sass/screen.scss */
+  /* line 58, ../sass/screen.scss */
   nav ul li {
     display: inline-block; }
+    /* line 61, ../sass/screen.scss */
+    nav ul li a {
+      color: inherit; }
 
-/* line 57, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .clear {
   clear: both; }
 
-/* line 61, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .lefty {
   float: left; }
 
-/* line 65, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 img.lefty {
   margin-right: 12px; }
 
-/* line 69, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .righty {
   float: right; }
 
-/* line 73, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 img.righty {
   margin-left: 12px; }
 
-/* line 81, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .button, .btn, input[type="button"] {
   background: #a2c15f;
   padding: 0.7em 1em;
@@ -133,10 +142,10 @@ img.righty {
   font-size: 1em;
   font-family: helvetica, arial, sans-serif;
   cursor: pointer; }
-  /* line 92, ../sass/screen.scss */
+  /* line 103, ../sass/screen.scss */
   .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
-  /* line 97, ../sass/screen.scss */
+  /* line 108, ../sass/screen.scss */
   .button.button-red, .button-red.btn, input[type="button"].button-red {
     background: #ce6057; }

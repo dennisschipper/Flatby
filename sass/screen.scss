@@ -20,12 +20,15 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2.2em;
-	margin-bottom: 24px;
 }
 
 h2 {
 	font-size: 1.5em;
 	opacity: 0.5;
+}
+
+a {
+	color: inherit;
 }
 
 p {
@@ -34,6 +37,10 @@ p {
 
 section {
 	padding-top: 1em;
+
+	img {
+		max-width: 100%;
+	}
 }
 
 body > section, body > header, body > footer {
@@ -50,6 +57,10 @@ nav {
 
 		li {
 			display: inline-block;
+
+			a {
+				color: inherit;
+			}
 		}
 	}
 }
