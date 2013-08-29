@@ -1,0 +1,142 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 10, ../sass/screen.scss */
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 100;
+  color: #444;
+  line-height: 1.75em; }
+
+/* line 17, ../sass/screen.scss */
+h1, h2, h3 {
+  margin-bottom: 12px; }
+
+/* line 21, ../sass/screen.scss */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 24px; }
+
+/* line 26, ../sass/screen.scss */
+h2 {
+  font-size: 1.5em;
+  opacity: 0.5; }
+
+/* line 31, ../sass/screen.scss */
+p {
+  margin-bottom: 12px; }
+
+/* line 35, ../sass/screen.scss */
+section {
+  padding-top: 1em; }
+
+/* line 39, ../sass/screen.scss */
+body > section, body > header, body > footer {
+  width: 960px;
+  margin: 0 auto;
+  margin-bottom: 20px; }
+
+/* line 46, ../sass/screen.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 51, ../sass/screen.scss */
+  nav ul li {
+    display: inline-block; }
+
+/* line 57, ../sass/screen.scss */
+.clear {
+  clear: both; }
+
+/* line 61, ../sass/screen.scss */
+.lefty {
+  float: left; }
+
+/* line 65, ../sass/screen.scss */
+img.lefty {
+  margin-right: 12px; }
+
+/* line 69, ../sass/screen.scss */
+.righty {
+  float: right; }
+
+/* line 73, ../sass/screen.scss */
+img.righty {
+  margin-left: 12px; }
+
+/* line 81, ../sass/screen.scss */
+.button, .btn, input[type="button"] {
+  background: #a2c15f;
+  padding: 0.7em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  border: 0px;
+  font-size: 1em;
+  font-family: helvetica, arial, sans-serif;
+  cursor: pointer; }
+  /* line 92, ../sass/screen.scss */
+  .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
+    border-bottom: 0.20em solid #a2a2a2;
+    padding-bottom: 0.5em; }
+  /* line 97, ../sass/screen.scss */
+  .button.button-red, .button-red.btn, input[type="button"].button-red {
+    background: #ce6057; }
