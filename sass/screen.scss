@@ -4,12 +4,13 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-
+@import "compass/css3";
 
 
 body {
-	font-family: helvetica, arial, sans-serif;
+	font-family: "proxima nova", helvetica, arial, sans-serif;
 	font-weight: 100;
+	background: #f4f4f4;
 	color: #444;
 	line-height: 1.75em;
 }
@@ -33,13 +34,63 @@ a {
 
 p {
 	margin-bottom: 12px;
+	font-size: 0.9em;
 }
 
-section {
-	padding-top: 1em;
+.clear {
+	clear: both;
+}
+
+section, article, .container {
+	@include box-sizing(border-box);
+	padding: 2em;
+	background: #fff;
+
+	&.blank {
+		padding: 0;
+	}
+
 
 	img {
 		max-width: 100%;
+	}
+
+	p {
+		&.last-child {
+
+		}
+	}
+
+	ul.list-generic {
+
+		li {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			padding-left: 0.5em;
+			border-bottom: 1px solid #cecece;
+			background: #f6f6f6;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		h1 {
+			font-size: 1.3em;
+			margin-bottom: 0em;
+		}
+
+		h2 {
+			font-size: 0.8em;
+			margin-bottom: 0em;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 0.9em;
+			margin-bottom: 0em;
+		}
 	}
 }
 
@@ -56,10 +107,17 @@ nav {
 		padding: 0;
 
 		li {
-			display: inline-block;
+			display: inline;
+			border: 0;
+			padding: 0;
 
 			a {
 				color: inherit;
+				display: block;
+				float: left;
+				background: #cecece;
+				padding: 0.5em 1.5em;
+				text-decoration: none;
 			}
 		}
 	}
@@ -97,7 +155,7 @@ img.righty {
 	color: #fff;
 	border: 0px;
 	font-size: 1em;
-	font-family: helvetica, arial, sans-serif;
+	font-family: "proxima nova", helvetica, arial, sans-serif;
 	cursor: pointer;
 
 	&.button-pressable {
@@ -106,7 +164,7 @@ img.righty {
 	}
 
 	&.button-red {
-		background: #ce6057;
+		background: #ef4040;
 	}
 }
 

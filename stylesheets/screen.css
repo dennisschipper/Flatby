@@ -60,78 +60,122 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 10, ../sass/screen.scss */
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "proxima nova", helvetica, arial, sans-serif;
   font-weight: 100;
+  background: #f4f4f4;
   color: #444;
   line-height: 1.75em; }
 
-/* line 17, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 h1, h2, h3 {
   margin-bottom: 12px; }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 h1 {
   font-size: 2.2em; }
 
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 h2 {
   font-size: 1.5em;
   opacity: 0.5; }
 
-/* line 30, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 a {
   color: inherit; }
 
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 p {
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  font-size: 0.9em; }
 
-/* line 38, ../sass/screen.scss */
-section {
-  padding-top: 1em; }
-  /* line 41, ../sass/screen.scss */
-  section img {
+/* line 40, ../sass/screen.scss */
+.clear {
+  clear: both; }
+
+/* line 44, ../sass/screen.scss */
+section, article, .container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2em;
+  background: #fff; }
+  /* line 49, ../sass/screen.scss */
+  section.blank, article.blank, .container.blank {
+    padding: 0; }
+  /* line 54, ../sass/screen.scss */
+  section img, article img, .container img {
     max-width: 100%; }
+  /* line 66, ../sass/screen.scss */
+  section ul.list-generic li, article ul.list-generic li, .container ul.list-generic li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    border-bottom: 1px solid #cecece;
+    background: #f6f6f6; }
+    /* line 73, ../sass/screen.scss */
+    section ul.list-generic li:last-child, article ul.list-generic li:last-child, .container ul.list-generic li:last-child {
+      margin-bottom: 0; }
+  /* line 78, ../sass/screen.scss */
+  section ul.list-generic h1, article ul.list-generic h1, .container ul.list-generic h1 {
+    font-size: 1.3em;
+    margin-bottom: 0em; }
+  /* line 83, ../sass/screen.scss */
+  section ul.list-generic h2, article ul.list-generic h2, .container ul.list-generic h2 {
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    text-transform: uppercase;
+    font-weight: 500; }
+  /* line 90, ../sass/screen.scss */
+  section ul.list-generic p, article ul.list-generic p, .container ul.list-generic p {
+    font-size: 0.9em;
+    margin-bottom: 0em; }
 
-/* line 46, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 body > section, body > header, body > footer {
   width: 960px;
   margin: 0 auto;
   margin-bottom: 20px; }
 
-/* line 53, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-  /* line 58, ../sass/screen.scss */
+  /* line 109, ../sass/screen.scss */
   nav ul li {
-    display: inline-block; }
-    /* line 61, ../sass/screen.scss */
+    display: inline;
+    border: 0;
+    padding: 0; }
+    /* line 114, ../sass/screen.scss */
     nav ul li a {
-      color: inherit; }
+      color: inherit;
+      display: block;
+      float: left;
+      background: #cecece;
+      padding: 0.5em 1.5em;
+      text-decoration: none; }
 
-/* line 68, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .clear {
   clear: both; }
 
-/* line 72, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .lefty {
   float: left; }
 
-/* line 76, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 img.lefty {
   margin-right: 12px; }
 
-/* line 80, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .righty {
   float: right; }
 
-/* line 84, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 img.righty {
   margin-left: 12px; }
 
-/* line 92, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .button, .btn, input[type="button"] {
   background: #a2c15f;
   padding: 0.7em 1em;
@@ -140,12 +184,12 @@ img.righty {
   color: #fff;
   border: 0px;
   font-size: 1em;
-  font-family: helvetica, arial, sans-serif;
+  font-family: "proxima nova", helvetica, arial, sans-serif;
   cursor: pointer; }
-  /* line 103, ../sass/screen.scss */
+  /* line 161, ../sass/screen.scss */
   .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
-  /* line 108, ../sass/screen.scss */
+  /* line 166, ../sass/screen.scss */
   .button.button-red, .button-red.btn, input[type="button"].button-red {
-    background: #ce6057; }
+    background: #ef4040; }
