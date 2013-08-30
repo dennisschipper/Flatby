@@ -85,71 +85,76 @@ a {
 
 /* line 35, ../sass/screen.scss */
 p {
-  margin-bottom: 12px;
-  font-size: 0.9em; }
+  margin-bottom: 12px; }
 
-/* line 40, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .clear {
-  clear: both; }
+  clear: both;
+  width: 0px;
+  height: 0px; }
 
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 section, article, .container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2em;
   background: #fff; }
-  /* line 49, ../sass/screen.scss */
+  /* line 50, ../sass/screen.scss */
+  section article, article article, .container article {
+    float: left;
+    width: 50%; }
+  /* line 55, ../sass/screen.scss */
   section.blank, article.blank, .container.blank {
     padding: 0; }
-  /* line 54, ../sass/screen.scss */
+  /* line 60, ../sass/screen.scss */
   section img, article img, .container img {
     max-width: 100%; }
-  /* line 66, ../sass/screen.scss */
+  /* line 72, ../sass/screen.scss */
   section ul.list-generic li, article ul.list-generic li, .container ul.list-generic li {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     border-bottom: 1px solid #cecece;
     background: #f6f6f6; }
-    /* line 73, ../sass/screen.scss */
+    /* line 79, ../sass/screen.scss */
     section ul.list-generic li:last-child, article ul.list-generic li:last-child, .container ul.list-generic li:last-child {
       margin-bottom: 0; }
-  /* line 78, ../sass/screen.scss */
+  /* line 84, ../sass/screen.scss */
   section ul.list-generic h1, article ul.list-generic h1, .container ul.list-generic h1 {
     font-size: 1.3em;
     margin-bottom: 0em; }
-  /* line 83, ../sass/screen.scss */
+  /* line 89, ../sass/screen.scss */
   section ul.list-generic h2, article ul.list-generic h2, .container ul.list-generic h2 {
     font-size: 0.8em;
     margin-bottom: 0em;
     text-transform: uppercase;
     font-weight: 500; }
-  /* line 90, ../sass/screen.scss */
+  /* line 96, ../sass/screen.scss */
   section ul.list-generic p, article ul.list-generic p, .container ul.list-generic p {
     font-size: 0.9em;
     margin-bottom: 0em; }
 
-/* line 97, ../sass/screen.scss */
-body > section, body > header, body > footer {
-  width: 960px;
+/* line 103, ../sass/screen.scss */
+body > section, body > header, body > footer, .container {
+  max-width: 1180px;
   margin: 0 auto;
   margin-bottom: 20px; }
 
-/* line 103, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 nav {
   background: #6dc5dd; }
-  /* line 105, ../sass/screen.scss */
+  /* line 111, ../sass/screen.scss */
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 111, ../sass/screen.scss */
+    /* line 117, ../sass/screen.scss */
     nav ul li {
       display: inline;
       border: 0;
       padding: 0; }
-      /* line 116, ../sass/screen.scss */
+      /* line 122, ../sass/screen.scss */
       nav ul li a {
         color: #fff;
         display: block;
@@ -159,31 +164,31 @@ nav {
         background: inherit;
         padding: 0.5em 1.5em;
         text-decoration: none; }
-        /* line 126, ../sass/screen.scss */
+        /* line 132, ../sass/screen.scss */
         nav ul li a:hover, nav ul li a:active {
           background: rgba(255, 255, 255, 0.2); }
 
-/* line 134, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .clear {
   clear: both; }
 
-/* line 138, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .lefty {
   float: left; }
 
-/* line 142, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 img.lefty {
   margin-right: 12px; }
 
-/* line 146, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .righty {
   float: right; }
 
-/* line 150, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 img.righty {
   margin-left: 12px; }
 
-/* line 158, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .button, .btn, input[type="button"] {
   background: #a2c15f;
   padding: 0.7em 1em;
@@ -195,28 +200,28 @@ img.righty {
   font-size: 1em;
   font-family: "proxima nova", helvetica, arial, sans-serif;
   cursor: pointer; }
-  /* line 170, ../sass/screen.scss */
+  /* line 176, ../sass/screen.scss */
   .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
-  /* line 175, ../sass/screen.scss */
+  /* line 181, ../sass/screen.scss */
   .button.button-red, .button-red.btn, input[type="button"].button-red {
     background: #ef4040; }
-  /* line 179, ../sass/screen.scss */
+  /* line 185, ../sass/screen.scss */
   .button.button-adjacent, .button-adjacent.btn, input[type="button"].button-adjacent {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
 
-/* line 185, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 label {
   display: block;
   margin-bottom: 1em; }
-  /* line 189, ../sass/screen.scss */
+  /* line 195, ../sass/screen.scss */
   label h2 {
     font-size: 1.1em;
     margin: 0; }
 
-/* line 197, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 input[type="text"], textarea {
   background: #f6f6f6;
   border: 0;
@@ -225,12 +230,12 @@ input[type="text"], textarea {
   padding: 0.7em 1em;
   margin: 0;
   font-size: 1em; }
-  /* line 206, ../sass/screen.scss */
+  /* line 212, ../sass/screen.scss */
   input[type="text"].button-adjacent, textarea.button-adjacent {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-/* line 212, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 textarea {
   width: 400px;
   height: 180px; }

@@ -34,17 +34,23 @@ a {
 
 p {
 	margin-bottom: 12px;
-	font-size: 0.9em;
 }
 
 .clear {
 	clear: both;
+	width: 0px;
+	height: 0px;
 }
 
 section, article, .container {
 	@include box-sizing(border-box);
 	padding: 2em;
 	background: #fff;
+
+	article {
+		float: left;
+		width: 50%;
+	}
 
 	&.blank {
 		padding: 0;
@@ -94,8 +100,8 @@ section, article, .container {
 	}
 }
 
-body > section, body > header, body > footer {
-	width: 960px;
+body > section, body > header, body > footer, .container {
+	max-width: 1180px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
