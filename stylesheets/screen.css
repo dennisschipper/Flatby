@@ -72,89 +72,117 @@ h1, h2, h3 {
 
 /* line 22, ../sass/screen.scss */
 h1 {
-  font-size: 2.2em; }
+  font-size: 2.2em;
+  line-height: 1em; }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 h2 {
   font-size: 1.5em;
   opacity: 0.5; }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 a {
   color: inherit; }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 p {
   margin-bottom: 12px; }
 
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .clear {
   clear: both;
   width: 0px;
   height: 0px; }
 
-/* line 45, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 section, article, .container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2em;
-  background: #fff; }
-  /* line 50, ../sass/screen.scss */
+  background: #fff;
+  border-radius: 4px; }
+  /* line 52, ../sass/screen.scss */
   section article, article article, .container article {
     float: left;
     width: 50%; }
-  /* line 55, ../sass/screen.scss */
+  /* line 57, ../sass/screen.scss */
   section.blank, article.blank, .container.blank {
-    padding: 0; }
-  /* line 60, ../sass/screen.scss */
+    padding: 0;
+    background: none; }
+  /* line 62, ../sass/screen.scss */
+  section.blurb, article.blurb, .container.blurb {
+    text-align: center;
+    background: #252525;
+    color: #f0f0f0; }
+    /* line 67, ../sass/screen.scss */
+    section.blurb > div, article.blurb > div, .container.blurb > div {
+      padding: 3em 3em; }
+    /* line 71, ../sass/screen.scss */
+    section.blurb h1, section.blurb h2, section.blurb p, article.blurb h1, article.blurb h2, article.blurb p, .container.blurb h1, .container.blurb h2, .container.blurb p {
+      opacity: 0.4; }
+    /* line 76, ../sass/screen.scss */
+    section.blurb h1, article.blurb h1, .container.blurb h1 {
+      font-weight: 700;
+      font-size: 3.5em;
+      text-transform: uppercase; }
+    /* line 82, ../sass/screen.scss */
+    section.blurb h2, article.blurb h2, .container.blurb h2 {
+      margin-bottom: 0.3em; }
+    /* line 86, ../sass/screen.scss */
+    section.blurb p, article.blurb p, .container.blurb p {
+      margin-bottom: 0; }
+  /* line 91, ../sass/screen.scss */
   section img, article img, .container img {
     max-width: 100%; }
-  /* line 72, ../sass/screen.scss */
-  section ul.list-generic li, article ul.list-generic li, .container ul.list-generic li {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
-    border-bottom: 1px solid #cecece;
-    background: #f6f6f6; }
-    /* line 79, ../sass/screen.scss */
-    section ul.list-generic li:last-child, article ul.list-generic li:last-child, .container ul.list-generic li:last-child {
-      margin-bottom: 0; }
-  /* line 84, ../sass/screen.scss */
-  section ul.list-generic h1, article ul.list-generic h1, .container ul.list-generic h1 {
-    font-size: 1.3em;
-    margin-bottom: 0em; }
-  /* line 89, ../sass/screen.scss */
-  section ul.list-generic h2, article ul.list-generic h2, .container ul.list-generic h2 {
-    font-size: 0.8em;
-    margin-bottom: 0em;
-    text-transform: uppercase;
-    font-weight: 500; }
-  /* line 96, ../sass/screen.scss */
-  section ul.list-generic p, article ul.list-generic p, .container ul.list-generic p {
-    font-size: 0.9em;
-    margin-bottom: 0em; }
+  /* line 101, ../sass/screen.scss */
+  section ul.list-generic, article ul.list-generic, .container ul.list-generic {
+    margin-top: 1em; }
+    /* line 104, ../sass/screen.scss */
+    section ul.list-generic li, article ul.list-generic li, .container ul.list-generic li {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid #cecece; }
+      /* line 109, ../sass/screen.scss */
+      section ul.list-generic li:last-child, article ul.list-generic li:last-child, .container ul.list-generic li:last-child {
+        margin-bottom: 0; }
+    /* line 114, ../sass/screen.scss */
+    section ul.list-generic h1, article ul.list-generic h1, .container ul.list-generic h1 {
+      font-size: 1.3em;
+      margin-bottom: 0em; }
+    /* line 119, ../sass/screen.scss */
+    section ul.list-generic h2, article ul.list-generic h2, .container ul.list-generic h2 {
+      font-size: 1em;
+      margin-bottom: 0em;
+      text-transform: uppercase;
+      font-weight: 500; }
+    /* line 126, ../sass/screen.scss */
+    section ul.list-generic p, article ul.list-generic p, .container ul.list-generic p {
+      font-size: 0.9em;
+      margin-bottom: 0em; }
 
-/* line 103, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 body > section, body > header, body > footer, .container {
   max-width: 1180px;
   margin: 0 auto;
   margin-bottom: 20px; }
 
-/* line 109, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 nav {
-  background: #6dc5dd; }
-  /* line 111, ../sass/screen.scss */
+  background: #444;
+  margin-top: 2em;
+  border-radius: 4px; }
+  /* line 146, ../sass/screen.scss */
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 117, ../sass/screen.scss */
+    /* line 152, ../sass/screen.scss */
     nav ul li {
       display: inline;
       border: 0;
       padding: 0; }
-      /* line 122, ../sass/screen.scss */
+      /* line 157, ../sass/screen.scss */
       nav ul li a {
         color: #fff;
         display: block;
@@ -162,33 +190,37 @@ nav {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
         float: left;
         background: inherit;
-        padding: 0.5em 1.5em;
+        padding: 1em 1.5em;
         text-decoration: none; }
-        /* line 132, ../sass/screen.scss */
+        /* line 167, ../sass/screen.scss */
         nav ul li a:hover, nav ul li a:active {
           background: rgba(255, 255, 255, 0.2); }
+        /* line 171, ../sass/screen.scss */
+        nav ul li a.focus {
+          background: rgba(255, 255, 255, 0.2);
+          padding: 1em 1.8em; }
 
-/* line 140, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .clear {
   clear: both; }
 
-/* line 144, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .lefty {
   float: left; }
 
-/* line 148, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 img.lefty {
   margin-right: 12px; }
 
-/* line 152, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .righty {
   float: right; }
 
-/* line 156, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 img.righty {
   margin-left: 12px; }
 
-/* line 164, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .button, .btn, input[type="button"] {
   background: #a2c15f;
   padding: 0.7em 1em;
@@ -200,28 +232,38 @@ img.righty {
   font-size: 1em;
   font-family: "proxima nova", helvetica, arial, sans-serif;
   cursor: pointer; }
-  /* line 176, ../sass/screen.scss */
+  /* line 216, ../sass/screen.scss */
   .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
-  /* line 181, ../sass/screen.scss */
+  /* line 221, ../sass/screen.scss */
   .button.button-red, .button-red.btn, input[type="button"].button-red {
     background: #ef4040; }
-  /* line 185, ../sass/screen.scss */
+  /* line 225, ../sass/screen.scss */
   .button.button-adjacent, .button-adjacent.btn, input[type="button"].button-adjacent {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
+  /* line 230, ../sass/screen.scss */
+  .button.button-cta, .button-cta.btn, input[type="button"].button-cta {
+    display: inline-block;
+    font-size: 1.3em;
+    background: #444;
+    margin-top: 1em;
+    padding: 1em 4em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px; }
 
-/* line 191, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 label {
   display: block;
   margin-bottom: 1em; }
-  /* line 195, ../sass/screen.scss */
+  /* line 246, ../sass/screen.scss */
   label h2 {
     font-size: 1.1em;
     margin: 0; }
 
-/* line 203, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 input[type="text"], textarea {
   background: #f6f6f6;
   border: 0;
@@ -230,12 +272,12 @@ input[type="text"], textarea {
   padding: 0.7em 1em;
   margin: 0;
   font-size: 1em; }
-  /* line 212, ../sass/screen.scss */
+  /* line 263, ../sass/screen.scss */
   input[type="text"].button-adjacent, textarea.button-adjacent {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-/* line 218, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 textarea {
   width: 400px;
   height: 180px; }

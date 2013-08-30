@@ -21,6 +21,7 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2.2em;
+	line-height: 1em;
 }
 
 h2 {
@@ -46,6 +47,7 @@ section, article, .container {
 	@include box-sizing(border-box);
 	padding: 2em;
 	background: #fff;
+	border-radius: 4px;
 
 	article {
 		float: left;
@@ -54,8 +56,37 @@ section, article, .container {
 
 	&.blank {
 		padding: 0;
+		background: none;
 	}
 
+	&.blurb {
+		text-align: center;
+		background: #252525;
+		color: #f0f0f0;
+
+		> div {
+			padding: 3em 3em;
+		}
+
+		h1, h2, p {
+			//text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+			opacity: 0.4;
+		}
+
+		h1 {
+			font-weight: 700;
+			font-size: 3.5em;
+			text-transform: uppercase;
+		}
+
+		h2 {
+			margin-bottom: 0.3em;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
 
 	img {
 		max-width: 100%;
@@ -68,13 +99,12 @@ section, article, .container {
 	}
 
 	ul.list-generic {
+		margin-top: 1em;
 
 		li {
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
-			padding-left: 0.5em;
 			border-bottom: 1px solid #cecece;
-			background: #f6f6f6;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -87,7 +117,7 @@ section, article, .container {
 		}
 
 		h2 {
-			font-size: 0.8em;
+			font-size: 1em;
 			margin-bottom: 0em;
 			text-transform: uppercase;
 			font-weight: 500;
@@ -100,6 +130,8 @@ section, article, .container {
 	}
 }
 
+
+
 body > section, body > header, body > footer, .container {
 	max-width: 1180px;
 	margin: 0 auto;
@@ -107,7 +139,10 @@ body > section, body > header, body > footer, .container {
 }
 
 nav {
-	background: #6dc5dd;
+	background: #444;
+	margin-top: 2em;
+	border-radius: 4px;
+	
 	ul {
 		list-style: none;
 		margin: 0;
@@ -126,11 +161,16 @@ nav {
 				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 				float: left;
 				background: inherit;
-				padding: 0.5em 1.5em;
+				padding: 1em 1.5em;
 				text-decoration: none;
 
 				&:hover, &:active {
 					background: rgba(255, 255, 255, 0.2);
+				}
+
+				&.focus {
+					background: rgba(255, 255, 255, 0.2);
+					padding: 1em 1.8em;
 				}
 			}
 		}
@@ -185,6 +225,17 @@ img.righty {
 	&.button-adjacent {
 		border-bottom-left-radius: 0;
 		border-top-left-radius: 0;
+	}
+
+	&.button-cta {
+		display: inline-block;
+		font-size: 1.3em;
+		background: #444;
+		margin-top: 1em;
+		padding: 1em 4em;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 2px;
 	}
 }
 
