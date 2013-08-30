@@ -63,7 +63,7 @@ body {
   font-family: "proxima nova", helvetica, arial, sans-serif;
   font-weight: 100;
   background: #f4f4f4;
-  color: #444;
+  color: #565656;
   line-height: 1.75em; }
 
 /* line 18, ../sass/screen.scss */
@@ -136,49 +136,58 @@ body > section, body > header, body > footer {
   margin: 0 auto;
   margin-bottom: 20px; }
 
-/* line 104, ../sass/screen.scss */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  /* line 109, ../sass/screen.scss */
-  nav ul li {
-    display: inline;
-    border: 0;
+/* line 103, ../sass/screen.scss */
+nav {
+  background: #6dc5dd; }
+  /* line 105, ../sass/screen.scss */
+  nav ul {
+    list-style: none;
+    margin: 0;
     padding: 0; }
-    /* line 114, ../sass/screen.scss */
-    nav ul li a {
-      color: inherit;
-      display: block;
-      float: left;
-      background: #cecece;
-      padding: 0.5em 1.5em;
-      text-decoration: none; }
+    /* line 111, ../sass/screen.scss */
+    nav ul li {
+      display: inline;
+      border: 0;
+      padding: 0; }
+      /* line 116, ../sass/screen.scss */
+      nav ul li a {
+        color: #fff;
+        display: block;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        float: left;
+        background: inherit;
+        padding: 0.5em 1.5em;
+        text-decoration: none; }
+        /* line 126, ../sass/screen.scss */
+        nav ul li a:hover, nav ul li a:active {
+          background: rgba(255, 255, 255, 0.2); }
 
-/* line 126, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .clear {
   clear: both; }
 
-/* line 130, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .lefty {
   float: left; }
 
-/* line 134, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 img.lefty {
   margin-right: 12px; }
 
-/* line 138, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .righty {
   float: right; }
 
-/* line 142, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 img.righty {
   margin-left: 12px; }
 
-/* line 150, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .button, .btn, input[type="button"] {
   background: #a2c15f;
   padding: 0.7em 1em;
+  margin: 0;
   border-radius: 4px;
   text-decoration: none;
   color: #fff;
@@ -186,10 +195,42 @@ img.righty {
   font-size: 1em;
   font-family: "proxima nova", helvetica, arial, sans-serif;
   cursor: pointer; }
-  /* line 161, ../sass/screen.scss */
+  /* line 170, ../sass/screen.scss */
   .button.button-pressable, .button-pressable.btn, input[type="button"].button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
-  /* line 166, ../sass/screen.scss */
+  /* line 175, ../sass/screen.scss */
   .button.button-red, .button-red.btn, input[type="button"].button-red {
     background: #ef4040; }
+  /* line 179, ../sass/screen.scss */
+  .button.button-adjacent, .button-adjacent.btn, input[type="button"].button-adjacent {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+
+/* line 185, ../sass/screen.scss */
+label {
+  display: block;
+  margin-bottom: 1em; }
+  /* line 189, ../sass/screen.scss */
+  label h2 {
+    font-size: 1.1em;
+    margin: 0; }
+
+/* line 197, ../sass/screen.scss */
+input[type="text"], textarea {
+  background: #f6f6f6;
+  border: 0;
+  border-radius: 4px;
+  font-family: "proxima nova", helvetica, arial, sans-serif;
+  padding: 0.7em 1em;
+  margin: 0;
+  font-size: 1em; }
+  /* line 206, ../sass/screen.scss */
+  input[type="text"].button-adjacent, textarea.button-adjacent {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+
+/* line 212, ../sass/screen.scss */
+textarea {
+  width: 400px;
+  height: 180px; }

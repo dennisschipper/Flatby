@@ -11,7 +11,7 @@ body {
 	font-family: "proxima nova", helvetica, arial, sans-serif;
 	font-weight: 100;
 	background: #f4f4f4;
-	color: #444;
+	color: #565656;
 	line-height: 1.75em;
 }
 
@@ -101,10 +101,12 @@ body > section, body > header, body > footer {
 }
 
 nav {
+	background: #6dc5dd;
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		
 
 		li {
 			display: inline;
@@ -112,12 +114,18 @@ nav {
 			padding: 0;
 
 			a {
-				color: inherit;
+				color: #fff;
 				display: block;
+				font-weight: 500;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 				float: left;
-				background: #cecece;
+				background: inherit;
 				padding: 0.5em 1.5em;
 				text-decoration: none;
+
+				&:hover, &:active {
+					background: rgba(255, 255, 255, 0.2);
+				}
 			}
 		}
 	}
@@ -150,6 +158,7 @@ img.righty {
 .button, input[type="button"] {
 	background: #a2c15f;
 	padding: 0.7em 1em;
+	margin: 0;
 	border-radius: 4px;
 	text-decoration: none;
 	color: #fff;
@@ -166,6 +175,43 @@ img.righty {
 	&.button-red {
 		background: #ef4040;
 	}
+
+	&.button-adjacent {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+}
+
+label {
+	display: block;
+	margin-bottom: 1em;
+
+	h2 {
+		font-size: 1.1em;
+		margin: 0;
+	}
+}
+
+
+
+input[type="text"], textarea {
+	background: #f6f6f6;
+	border: 0;
+	border-radius: 4px;
+	font-family: "proxima nova", helvetica, arial, sans-serif;
+	padding: 0.7em 1em;
+	margin: 0;
+	font-size: 1em;
+
+	&.button-adjacent {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+textarea {
+	width: 400px;
+	height: 180px;
 }
 
 // Bootstrap styles
