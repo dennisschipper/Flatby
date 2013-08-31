@@ -110,7 +110,7 @@ section, article, .container {
 
 		p {
 			margin-bottom: 0;
-			font-size: 0.9em;
+			font-size: 1em;
 			color: #949494;
 		}
 	}
@@ -313,7 +313,7 @@ img.righty {
 
 
 
-.button, input[type="button"] {
+.button, input[type="button"], button {
 	@include box-sizing(border-box);
 	background: #444;
 	padding: 0.7em 1em;
@@ -333,6 +333,10 @@ img.righty {
 
 	&.button-red {
 		background: #ef4040;
+	}
+
+	&.button-submit {
+		background: green;
 	}
 
 	&.button-adjacent {
@@ -368,19 +372,36 @@ label {
 	h2 {
 		font-size: 1.1em;
 		margin: 0;
+		margin-bottom: 0.2em;
+	}
+}
+
+form {
+	h1 {
+		margin-left: 14px;
+	}
+
+	label {
+		margin-left: 14px;
 	}
 }
 
 
 
-input[type="text"], textarea {
+input[type="text"], input[type="password"], textarea {
 	background: #f6f6f6;
 	border: 0;
 	border-radius: 4px;
 	font-family: "proxima nova", helvetica, arial, sans-serif;
-	padding: 0.7em 1em;
+	padding: 0.7em 14px;
 	margin: 0;
+	margin-left: -14px;
+	font-weight: 100;
 	font-size: 1em;
+
+	&.long {
+		width: 350px;
+	}
 
 	&.button-adjacent {
 		border-bottom-right-radius: 0;

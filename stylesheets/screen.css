@@ -144,7 +144,7 @@ section, article, .container {
     /* line 111, ../sass/screen.scss */
     section.blurb p, article.blurb p, .container.blurb p {
       margin-bottom: 0;
-      font-size: 0.9em;
+      font-size: 1em;
       color: #949494; }
   /* line 118, ../sass/screen.scss */
   section img, article img, .container img {
@@ -297,7 +297,7 @@ img.righty {
   margin-left: 12px; }
 
 /* line 316, ../sass/screen.scss */
-.button, input[type="button"] {
+.button, input[type="button"], button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -312,18 +312,21 @@ img.righty {
   cursor: pointer;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
   /* line 329, ../sass/screen.scss */
-  .button.button-pressable, input[type="button"].button-pressable {
+  .button.button-pressable, input[type="button"].button-pressable, button.button-pressable {
     border-bottom: 0.20em solid #a2a2a2;
     padding-bottom: 0.5em; }
   /* line 334, ../sass/screen.scss */
-  .button.button-red, input[type="button"].button-red {
+  .button.button-red, input[type="button"].button-red, button.button-red {
     background: #ef4040; }
   /* line 338, ../sass/screen.scss */
-  .button.button-adjacent, input[type="button"].button-adjacent {
+  .button.button-submit, input[type="button"].button-submit, button.button-submit {
+    background: green; }
+  /* line 342, ../sass/screen.scss */
+  .button.button-adjacent, input[type="button"].button-adjacent, button.button-adjacent {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
-  /* line 343, ../sass/screen.scss */
-  .button.button-cta, input[type="button"].button-cta {
+  /* line 347, ../sass/screen.scss */
+  .button.button-cta, input[type="button"].button-cta, button.button-cta {
     display: inline-block;
     font-size: 1.3em;
     background: #444;
@@ -332,8 +335,8 @@ img.righty {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.2em; }
-  /* line 354, ../sass/screen.scss */
-  .button.button-buy, input[type="button"].button-buy {
+  /* line 358, ../sass/screen.scss */
+  .button.button-buy, input[type="button"].button-buy, button.button-buy {
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -341,35 +344,48 @@ img.righty {
     text-transform: uppercase;
     margin-top: 1em; }
 
-/* line 364, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 label {
   display: block;
   margin-bottom: 1em; }
-  /* line 368, ../sass/screen.scss */
+  /* line 372, ../sass/screen.scss */
   label h2 {
     font-size: 1.1em;
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 0.2em; }
 
-/* line 376, ../sass/screen.scss */
-input[type="text"], textarea {
+/* line 380, ../sass/screen.scss */
+form h1 {
+  margin-left: 14px; }
+/* line 384, ../sass/screen.scss */
+form label {
+  margin-left: 14px; }
+
+/* line 391, ../sass/screen.scss */
+input[type="text"], input[type="password"], textarea {
   background: #f6f6f6;
   border: 0;
   border-radius: 4px;
   font-family: "proxima nova", helvetica, arial, sans-serif;
-  padding: 0.7em 1em;
+  padding: 0.7em 14px;
   margin: 0;
+  margin-left: -14px;
+  font-weight: 100;
   font-size: 1em; }
-  /* line 385, ../sass/screen.scss */
-  input[type="text"].button-adjacent, textarea.button-adjacent {
+  /* line 402, ../sass/screen.scss */
+  input[type="text"].long, input[type="password"].long, textarea.long {
+    width: 350px; }
+  /* line 406, ../sass/screen.scss */
+  input[type="text"].button-adjacent, input[type="password"].button-adjacent, textarea.button-adjacent {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-/* line 391, ../sass/screen.scss */
+/* line 412, ../sass/screen.scss */
 textarea {
   width: 400px;
   height: 180px; }
 
-/* line 396, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 hr {
   width: 100%;
   height: 1px;
@@ -379,7 +395,7 @@ hr {
   border: 0px;
   opacity: 0.2; }
 
-/* line 407, ../sass/screen.scss */
+/* line 428, ../sass/screen.scss */
 .item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -387,24 +403,24 @@ hr {
   border-radius: 4px;
   width: 33%;
   background: #fff; }
-  /* line 413, ../sass/screen.scss */
+  /* line 434, ../sass/screen.scss */
   .item .item-info {
     padding: 1em 2em;
     padding-bottom: 2em; }
-  /* line 418, ../sass/screen.scss */
+  /* line 439, ../sass/screen.scss */
   .item h1 {
     font-size: 1.5em;
     font-weight: 500; }
-  /* line 423, ../sass/screen.scss */
+  /* line 444, ../sass/screen.scss */
   .item p {
     font-size: 0.9em;
     color: #7d7d7d; }
-  /* line 428, ../sass/screen.scss */
+  /* line 449, ../sass/screen.scss */
   .item img {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
 
-/* line 434, ../sass/screen.scss */
+/* line 455, ../sass/screen.scss */
 .price {
   display: block;
   font-size: 1.4em;
