@@ -7,14 +7,17 @@
 	<title>Button Styles</title>
 	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 	<link rel="stylesheet" href="./stylesheets/screen.css">
+	<link rel="stylesheet" href="./stylesheets/fonts.css">
 </head>
 
 <body>
 	<section class="blank">
-		<nav>
+		<nav class="navigation">
 			<ul>
 				<li>
-					<a href="#" class="focus">*</a>
+					<a href="#" class="focus">
+						<i class="icon-large icon-home"></i>
+					</a>
 				</li>
 				<li>
 					<a href="#">Menu item 1</a>
@@ -30,13 +33,62 @@
 		</nav>
 	</section>
 
+	<div class="container blank">
+		<nav class="breadcrumbs">
+			<ul>
+				<li>Your are at:</li>
+				<li>
+					<a href="#">Home</a> <i class="icon-large icon-angle-right"></i>
+				</li>
+				<li>
+					<a href="#">Settings</a> <i class="icon-large icon-angle-right"></i>
+				</li>
+				<li>
+					User Settings
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="container blank">
+		<ul class="dropdown">
+			<li>
+				<a href="#">Dropdown options for the nav bar</a>
+			</li>
+			<li>
+				<a href="#">Another option</a>
+			</li>
+			<li>
+				<a href="#">Third option</a>
+			</li>
+			<li>
+				<a href="#">The last option</a>
+			</li>
+		</ul>
+	</div>
+
+
 	<section class="blank blurb">
 		<img src="./images/image-large-placeholder.png" alt="Image">
 		<div>
-			<h1>Flatby the UI Kit</h1>
-			<h2>The subtitle for the main text blurb. Add some stuff here so that it fills up the line</h2>
+			<h1>Flatby UI</h1>
+			<h2>The subtitle for the main text blurb</h2>
+			<hr>
 			<p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some. Yeah, but you're uh, you're so, you're so thin. Hey Biff, check out this guy's life preserver, dork thinks he's gonna drown. Doc, you gotta help me. you were the only one who knows how your time machine works.</p>
 			<a href="#" class="button button-cta">Call To Action! Buy our stuff!</a>
+		</div>
+	</section>
+
+	<section class="blank items">
+		<div class="item">
+			<img src="./images/item-large-placeholder.png" alt="Image">
+			
+			<div class="item-info">
+				<h1>Item title</h1>
+				<p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
+				<span class="price">£49.99</span>
+				<a href="#" class="button button-buy">Get it now</a>
+			</div>
 		</div>
 	</section>
 
@@ -127,33 +179,6 @@
 		<input type="button" value="This is a form button">
 
 		<a href="#" class="button">22</a>
-
-	</section>
-
-	<section>
-		<h1>Bootstrap button styles</h1>
-
-		<!-- Standard gray button with gradient -->
-		<button type="button" class="btn btn-default">Default</button>
-
-		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-		<button type="button" class="btn btn-primary">Primary</button>
-
-		<!-- Indicates a successful or positive action -->
-		<button type="button" class="btn btn-success">Success</button>
-
-		<!-- Contextual button for informational alert messages -->
-		<button type="button" class="btn btn-info">Info</button>
-
-		<!-- Indicates caution should be taken with this action -->
-		<button type="button" class="btn btn-warning">Warning</button>
-
-		<!-- Indicates a dangerous or potentially negative action -->
-		<button type="button" class="btn btn-danger">Danger</button>
-
-		<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-		<button type="button" class="btn btn-link">Link</button>
-
 
 	</section>
 	
