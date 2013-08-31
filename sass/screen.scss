@@ -316,7 +316,7 @@ img.righty {
 .button, input[type="button"], button {
 	@include box-sizing(border-box);
 	background: #444;
-	padding: 0.7em 1em;
+	padding: 1em 3em;
 	margin: 0;
 	text-decoration: none;
 	color: #fff;
@@ -336,7 +336,7 @@ img.righty {
 	}
 
 	&.button-submit {
-		background: green;
+		background: #00986a;
 	}
 
 	&.button-adjacent {
@@ -391,9 +391,8 @@ form {
 input[type="text"], input[type="password"], textarea {
 	background: #f6f6f6;
 	border: 0;
-	border-radius: 4px;
 	font-family: "proxima nova", helvetica, arial, sans-serif;
-	padding: 0.7em 14px;
+	padding: 1em 1.3em;
 	margin: 0;
 	margin-left: -14px;
 	font-weight: 100;
