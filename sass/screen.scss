@@ -47,6 +47,7 @@ p {
 	height: 1px;
 }
 
+
 section, article, .container {
 	@include box-sizing(border-box);
 	padding: 2em;
@@ -62,6 +63,15 @@ section, article, .container {
 	&.blank {
 		padding: 0;
 		background: none;
+	}
+
+	&.wide {
+		@include box-sizing(border-box);
+		max-width: 100%;
+		> div {
+			@include box-sizing(border-box);
+			width: 100%;
+		}
 	}
 
 	&.blurb {
@@ -451,13 +461,110 @@ hr {
 	}
 }
 
+.item-featured {
+	@include box-sizing(border-box);
+	border-radius: 4px;
+	background: #fff;
+
+	.item-info {
+		padding: 2em;
+
+		.button-buy {
+			width: auto;
+			margin-left: -10px;
+		}
+	}
+
+	img {
+		width: 50%;
+		float: left;
+		margin-right: 2em;
+		border-radius: 0px;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+}
+
 .price {
 	display: block;
 	font-size: 1.4em;
 	font-weight: 500;
 }
 
+.slider {
+	text-align: center;
+	position: relative;
+	height: 450px;
+	overflow: hidden;
 
+	img {
+		max-width: 100%;
+		width: 100%;
+		width: auto;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		z-index: 100;
+	}
+
+	* {
+		position: relative;
+		z-index: 101;
+	}
+
+	h1 {
+		font-weight: 500;
+		color: #fff;
+		font-size: 4em;
+		margin-top: 100px;
+	}
+
+	h2 {
+		color: #fff;
+	}
+
+	.slider-controls {
+		position: absolute;
+		top: 45%;
+		width: 100%;
+		z-index: 101;
+
+		a {
+			text-decoration: none;
+			position: absolute;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: rgba(0, 0, 0, 0.3);
+			text-align: center;
+			color: #fff;
+
+			i {
+				position: relative;
+				top: 4px;
+				opacity: 0.8;
+			}
+
+			&.slider-control-left {
+				left: 0px;
+			}
+
+			&.slider-control-right {
+				right: 0px;
+			}
+		}
+	}
+}
+
+
+section.flatby {
+
+	h2 {
+		font-size: 0.9em;
+		letter-spacing: 1px;
+		font-weight: 500;
+	}
+}
 
 
 
