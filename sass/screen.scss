@@ -15,8 +15,8 @@ $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 body {
 	font-family: "proxima nova", helvetica, arial, sans-serif;
 	font-weight: 100;
-	background: #f4f4f4;
-	color: #565656;
+	background: #edeae9;
+	color: #707070;
 	line-height: 1.75em;
 }
 
@@ -177,44 +177,75 @@ body > section, body > header, body > footer, .container {
 	margin-bottom: 20px;
 }
 
-nav.navigation {
-	background: #444;
-	margin-top: 2em;
-	border-radius: 4px;
-	
-	> ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+nav {
+	&.navigation {
+		background: #444;
+		margin-top: 2em;
+		border-radius: 4px;
 		
-
-		> li {
-			display: inline;
-			border: 0;
+		> ul {
+			list-style: none;
+			margin: 0;
 			padding: 0;
+			
 
-			> a {
-				color: #fff;
-				display: block;
-				font-weight: 500;
-				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-				float: left;
-				background: inherit;
-				padding: 1em 1.5em;
-				text-decoration: none;
+			> li {
+				display: inline;
+				border: 0;
+				padding: 0;
 
-				&:hover, &:active {
-					background: rgba(255, 255, 255, 0.2);
+				> a {
+					color: #cecece;
+					display: block;
+					font-weight: 500;
+					text-shadow: none;
+					float: left;
+					background: inherit;
+					padding: 1em 1.5em;
+					text-decoration: none;
+
+					&:hover {
+						background: rgba(255, 255, 255, 0.2);
+					}
+
+					&.focus {
+						background: rgba(255, 255, 255, 0.2);
+						padding: 1em 1.8em;
+					}
 				}
+			}
+		}
+	}
 
-				&.focus {
-					background: rgba(255, 255, 255, 0.2);
-					padding: 1em 1.8em;
+	&.tabs {
+		background: none;
+
+		ul {
+
+			li {
+
+				a {
+					
+					color: inherit;
+					border: 1px solid rgba(0, 0, 0, 0.0);
+
+					border-bottom: 1px solid #cecece;
+
+					&.active {
+						border: 1px solid #cecece;
+						border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+						margin-right: -1px;
+					}
+
+					&:hover {
+						background: rgba(0, 0, 0, 0.1);
+					}
 				}
 			}
 		}
 	}
 }
+
 
 
 ul.dropdown {
@@ -336,6 +367,10 @@ img.righty {
 	cursor: pointer;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+
 	&.button-pressable {
 		border-bottom: 0.20em solid #a2a2a2;
 		padding-bottom: 0.5em;
@@ -347,6 +382,10 @@ img.righty {
 
 	&.button-submit {
 		background: #00986a;
+
+		&:hover {
+			background: #000;
+		}
 	}
 
 	&.button-adjacent {
@@ -363,6 +402,10 @@ img.righty {
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 0.2em;
+
+		&:hover {
+			background: #000;
+		}
 	}
 
 	&.button-buy {
@@ -372,6 +415,10 @@ img.righty {
 		font-weight: 500;
 		text-transform: uppercase;
 		margin-top: 1em;
+
+		&:hover {
+			background: #000;
+		}
 	}
 }
 
@@ -380,7 +427,7 @@ label {
 	margin-bottom: 1em;
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 1em;
 		margin: 0;
 		margin-bottom: 0.2em;
 	}
@@ -555,6 +602,32 @@ hr {
 		}
 	}
 }
+
+.progress-bar {
+	@include box-sizing(border-box);
+	background: #cecece;
+	color: #fff;
+	font-weight: 500;
+	text-shadow: $text-shadow;
+
+	.progress-bar-30 {
+		background: #6ea164;
+		padding: 1em;
+		width: 30%;
+
+	}
+
+	&.progress-bar-small {
+		> div {
+			padding: 0.2em 1em;
+		}
+	}
+}
+
+
+
+
+
 
 
 section.flatby {
