@@ -60,7 +60,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 15, ../sass/screen.scss */
 body {
-  font-family: "proxima nova", helvetica, arial, sans-serif;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
   font-weight: 100;
   background: #edeae9;
   color: #707070;
@@ -336,7 +336,7 @@ img.righty {
   color: #fff;
   border: 0px;
   font-size: 1em;
-  font-family: "proxima nova", helvetica, arial, sans-serif;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
   cursor: pointer;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease 0s;
@@ -405,7 +405,7 @@ form label {
 input[type="text"], input[type="password"], textarea {
   background: #f6f6f6;
   border: 0;
-  font-family: "proxima nova", helvetica, arial, sans-serif;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
   padding: 1em 1.3em;
   margin: 0;
   margin-left: -14px;
@@ -562,8 +562,11 @@ hr {
   .progress-bar.progress-bar-small > div {
     padding: 0.2em 1em; }
 
-/* line 635, ../sass/screen.scss */
-section.flatby h2 {
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  font-weight: 500; }
+/* line 633, ../sass/screen.scss */
+section.flatby {
+  border-radius: 0px; }
+  /* line 636, ../sass/screen.scss */
+  section.flatby h2 {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: 500; }

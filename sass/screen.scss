@@ -13,7 +13,7 @@ $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 // Unifiy all the list/nav crap
 
 body {
-	font-family: "proxima nova", helvetica, arial, sans-serif;
+	font-family: "Open Sans", helvetica, arial, sans-serif;
 	font-weight: 100;
 	background: #edeae9;
 	color: #707070;
@@ -363,7 +363,7 @@ img.righty {
 	color: #fff;
 	border: 0px;
 	font-size: 1em;
-	font-family: "proxima nova", helvetica, arial, sans-serif;
+	font-family: "Open Sans", helvetica, arial, sans-serif;
 	cursor: pointer;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
@@ -448,7 +448,7 @@ form {
 input[type="text"], input[type="password"], textarea {
 	background: #f6f6f6;
 	border: 0;
-	font-family: "proxima nova", helvetica, arial, sans-serif;
+	font-family: "Open Sans", helvetica, arial, sans-serif;
 	padding: 1em 1.3em;
 	margin: 0;
 	margin-left: -14px;
@@ -631,6 +631,7 @@ hr {
 
 
 section.flatby {
+	border-radius: 0px;
 
 	h2 {
 		font-size: 0.9em;
