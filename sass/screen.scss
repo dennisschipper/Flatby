@@ -1,8 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @import "compass/css3";
 
@@ -11,6 +6,8 @@ $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 
 // TO-DO
 // Unifiy all the list/nav crap
+// Proper color schemes
+// Tooltips
 
 body {
 	font-family: "Open Sans", helvetica, arial, sans-serif;
@@ -134,37 +131,6 @@ section, article, .container {
 
 		}
 	}
-
-	ul.list-generic {
-		margin-top: 1em;
-
-		li {
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
-			border-bottom: 1px solid #cecece;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		h1 {
-			font-size: 1.3em;
-			margin-bottom: 0em;
-		}
-
-		h2 {
-			font-size: 1em;
-			margin-bottom: 0em;
-			text-transform: uppercase;
-			font-weight: 500;
-		}
-
-		p {
-			font-size: 0.9em;
-			margin-bottom: 0em;
-		}
-	}
 }
 
 
@@ -192,6 +158,10 @@ nav {
 				border: 0;
 				padding: 0;
 
+				&.lefty {
+					float: right;
+				}
+
 				> a {
 					color: #cecece;
 					display: block;
@@ -209,6 +179,27 @@ nav {
 					&.focus {
 						background: rgba(255, 255, 255, 0.2);
 						padding: 1em 1.8em;
+					}
+
+					&.navigation-home {
+						&:hover {
+							background: #00986a;
+							color: #fff;
+						}
+					}
+
+					&.navigation-settings {
+						&:hover {
+							background: #00986a;
+							color: #fff;
+						}
+					}
+
+					&.navigation-user {
+						&:hover {
+							background: #00986a;
+							color: #fff;
+						}
 					}
 				}
 			}
@@ -364,18 +355,46 @@ img.righty {
 	font-family: "Open Sans", helvetica, arial, sans-serif;
 	cursor: pointer;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	position: relative;
+	display: inline-block;
 
 	transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-webkit-transition: all 0.3s ease 0s;
 
-	&.button-pressable {
-		border-bottom: 0.20em solid #a2a2a2;
-		padding-bottom: 0.5em;
+	&.button-and-icon {
+		padding-left: 6.5em;
+
+		div {
+			background: rgba(0, 0, 0, 0.2);
+			display: inline-block;
+			padding: 1em 1.4em;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
 	}
 
-	&.button-red {
-		background: #ef4040;
+	&.button-small {
+		padding: 0.5em 1.5em;
+		font-size: 0.8em;
+		font-weight: 500;
+	}
+
+	&:hover {
+		background: #000;
+	}
+
+	.notification {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		font-size: 0.75em;
+		line-height: 1em;
+		background: #e27066;
+		display: block;
+		padding: 0.5em;
+		color: #fff;
 	}
 
 	&.button-submit {
@@ -622,7 +641,72 @@ hr {
 	}
 }
 
+strong {
+	font-weight: 500;
+	color: #fff;
+}
 
+.item-header {
+	color: #fff;
+	font-weight: 500;
+	display: block;
+	text-align: center;
+	background: #444;
+	font-size: 1.3em;
+	padding: 1em;
+	letter-spacing: 2px;
+	margin: 0;
+	text-decoration: none;
+}
+
+.item-footer {
+	@extend h1;
+	@extend .item-header;
+	font-size: 1em;
+
+	&.green {
+		background: #00986a;
+	}
+}
+
+.activity {
+	@include box-sizing(border-box);
+	background: #444;
+	width: 300px;
+
+	.activity-list-update {
+		padding: 6px;
+		color: #e0e0e0;
+		font-size: 0.9em;
+		border-top: 1px solid #5a5a5a;
+		line-height: 1.3em;
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+
+	h1 {
+
+	}
+
+	p {
+		position: relative;
+		top: 1em;
+	}
+
+	h2 {
+		font-size: 1em;
+		font-weight: 500;
+		opacity: 0.5;
+	}
+
+	img {
+		float: left;
+		margin: 10px;
+	}
+}
 
 
 
