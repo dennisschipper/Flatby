@@ -6,6 +6,9 @@ $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 $main-background: #edeae9;
 $dark-background: #444;
 
+$primary-text-color: #707070;
+$secondary-text-color: #838383;
+
 // TO-DO
 // Unifiy all the list/nav crap
 // Proper color schemes
@@ -15,7 +18,7 @@ body {
 	font-family: "Open Sans", helvetica, arial, sans-serif;
 	font-weight: 100;
 	background: $main-background;
-	color: #707070;
+	color: $primary-text-color;
 	line-height: 1.75em;
 }
 
@@ -40,12 +43,37 @@ p {
 	margin-bottom: 12px;
 }
 
+strong {// im not sure why this is #fff
+	font-weight: 500;
+	color: #fff;
+}
+
 .clear {
 	clear: both;
 	width: 1px;
 	height: 1px;
 }
 
+.lefty {
+	float: left;
+}
+
+img.lefty {
+	margin-right: 12px;
+}
+
+.righty {
+	float: right;
+}
+
+img.righty {
+	margin-left: 12px;
+}
+
+
+//
+// Generic Structure Styles
+//
 
 section, article, .container {
 	@include box-sizing(border-box);
@@ -143,6 +171,10 @@ body > section, body > header, body > footer, .container {
 	margin-bottom: 20px;
 }
 
+//
+// Site Navigation (menu, breadcrumbs, tabs, dropdowns)
+//
+
 nav {
 	&.navigation {
 		background: $dark-background;
@@ -235,8 +267,41 @@ nav {
 			}
 		}
 	}
-}
 
+	&.breadcrumbs {
+		padding-left: 1em;
+		font-size: 0.85em;
+		color: $secondary-text-color;
+
+		ul {
+			li {
+				display: inline;
+
+				&:last-child {
+					font-weight: 500;
+					color: $dark-background;
+				}
+
+				a {
+					display: inline;
+					float: none;
+					text-decoration: none;
+					color: inherit;
+
+					&:hover {
+						color: $dark-background;
+					}
+				}
+
+				i {
+					position: relative;
+					margin-left: 4px;
+					margin-right: 4px;
+				}
+			}
+		}
+	}
+}
 
 
 ul.dropdown {
@@ -282,68 +347,9 @@ ul.dropdown {
 	}
 }
 
-
-
-nav {
-	&.breadcrumbs {
-		padding-left: 1em;
-		font-size: 0.85em;
-		color: #cecece;
-
-		ul {
-			li {
-				display: inline;
-
-				&:last-child {
-					font-weight: 500;
-					color: $dark-background;
-				}
-
-				a {
-					display: inline;
-					float: none;
-					text-decoration: none;
-					color: inherit;
-
-					&:hover {
-						color: $dark-background;
-					}
-				}
-
-				i {
-					position: relative;
-					margin-left: 4px;
-					margin-right: 4px;
-				}
-			}
-		}
-	}
-}
-
-
-
-
-.clear {
-	clear: both;
-}
-
-.lefty {
-	float: left;
-}
-
-img.lefty {
-	margin-right: 12px;
-}
-
-.righty {
-	float: right;
-}
-
-img.righty {
-	margin-left: 12px;
-}
-
-
+//
+// Buttons & Forms
+//
 
 .button, input[type="button"], button {
 	@include box-sizing(border-box);
@@ -364,6 +370,10 @@ img.righty {
 	-moz-transition: all 0.3s ease 0s;
 	-webkit-transition: all 0.3s ease 0s;
 
+	&:hover {
+		background: #000;
+	}
+
 	&.button-and-icon {
 		padding-left: 6.5em;
 
@@ -381,22 +391,6 @@ img.righty {
 		padding: 0.5em 1.5em;
 		font-size: 0.8em;
 		font-weight: 500;
-	}
-
-	&:hover {
-		background: #000;
-	}
-
-	.notification {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		font-size: 0.75em;
-		line-height: 1em;
-		background: #e27066;
-		display: block;
-		padding: 0.5em;
-		color: #fff;
 	}
 
 	&.button-submit {
@@ -455,6 +449,18 @@ img.righty {
 			background: #000;
 		}
 	}
+
+	.notification {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		font-size: 0.75em;
+		line-height: 1em;
+		background: #e27066;
+		display: block;
+		padding: 0.5em;
+		color: #fff;
+	}
 }
 
 label {
@@ -477,8 +483,6 @@ form {
 		margin-left: 14px;
 	}
 }
-
-
 
 input[type="text"], input[type="password"], textarea {
 	background: #f6f6f6;
@@ -503,6 +507,10 @@ input[type="text"], input[type="password"], textarea {
 textarea {
 	width: 400px;
 	height: 180px;
+
+	&.long {
+		width: 600px;
+	}
 }
 
 hr {
@@ -515,6 +523,10 @@ hr {
 	opacity: 0.2;
 }
 
+
+//
+// Generic site elements (items, featured items, sliders, )
+//
 
 .item {
 	@include box-sizing(border-box);
@@ -659,11 +671,6 @@ hr {
 	}
 }
 
-strong {
-	font-weight: 500;
-	color: #fff;
-}
-
 .item-header {
 	color: #fff;
 	font-weight: 500;
@@ -675,6 +682,45 @@ strong {
 	letter-spacing: 2px;
 	margin: 0;
 	text-decoration: none;
+}
+
+.comments {
+	h1, h2 {// Going to have to switch this to something i can @extend
+		margin-left: 14px;
+	}
+
+	h1 {
+		margin-bottom: 0.1em;
+	}
+
+	h2 {
+		font-size: 1em;
+	}
+
+	form {
+		h2 {
+			margin-left: 0px;
+		}
+
+		textarea {
+			height: 80px;
+		}
+	}
+
+	.comment {
+		h3 {
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		p {
+			font-size: 0.9em;
+		}
+
+		padding: 1.5em;
+		border: 1px solid #e8e8e8;
+		margin-bottom: 1em;
+	}
 }
 
 .item-footer {
@@ -728,7 +774,9 @@ strong {
 
 
 
-
+//
+// Presentation styles for flatby
+//
 
 section.flatby {
 	@extend .blurb;
