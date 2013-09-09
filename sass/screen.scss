@@ -6,6 +6,8 @@ $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 $main-background: #edeae9;
 $dark-background: #444;
 
+$color-background: #6ea164;
+
 $primary-text-color: #707070;
 $secondary-text-color: #838383;
 
@@ -191,6 +193,24 @@ nav {
 				display: inline;
 				border: 0;
 				padding: 0;
+
+				&:first-child {
+					a {
+						&:hover {
+							border-bottom-left-radius: 4px;
+							border-top-left-radius: 4px;
+						}
+					}
+				}
+
+				&.last-menu-item {
+					a {
+						&:hover {
+							border-bottom-right-radius: 4px;
+							border-top-right-radius: 4px;
+						}
+					}
+				}
 
 				&.lefty {
 					float: right;
@@ -816,6 +836,49 @@ section.flatby {
 
 	hr {
 		margin-top: 80px;
+	}
+}
+
+.progress-steps {
+
+	.step {
+		background: #fff;
+		border-right: 1px solid #f5f5f5;
+		@include box-sizing(border-box);
+		width: 33.3%;
+		float: left;
+		text-align: center;
+		padding: 3em 1em;
+		display: block;
+		text-decoration: none;
+		height: 330px;
+
+		&:last-child {
+			border-right: 0px;
+		}
+
+		i {
+			opacity: 0.2;
+		}
+
+		h1 {
+			font-size: 1.5em;
+			margin-top: 20px;
+		}
+
+		ul {
+			display: block;
+			text-align: left;
+			list-style-type: disc;
+			width: 60%;
+			margin: 0 auto;
+			font-size: 0.8em;
+		}
+
+		&:hover {
+			background: $color-background;
+			color: #fff;
+		}
 	}
 }
 
