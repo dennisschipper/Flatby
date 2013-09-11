@@ -11,13 +11,15 @@ $color-background: #6ea164;
 $primary-text-color: #707070;
 $secondary-text-color: #838383;
 
+$fonts: "Open Sans", helvetica, arial, sans-serif;
+
 // TO-DO
 // Unifiy all the list/nav crap
 // Proper color schemes
 // Tooltips
 
 body {
-	font-family: "Open Sans", helvetica, arial, sans-serif;
+	font-family: $fonts;
 	font-weight: 100;
 	background: $main-background;
 	color: $primary-text-color;
@@ -37,6 +39,10 @@ h2 {
 	font-size: 1.5em;
 }
 
+h3 {
+	font-size: 1.2em;
+}
+
 a {
 	color: inherit;
 }
@@ -45,15 +51,12 @@ p {
 	margin-bottom: 12px;
 }
 
-strong {// im not sure why this is #fff
+strong {
 	font-weight: 500;
-	color: #fff;
 }
 
 .clear {
 	clear: both;
-	width: 1px;
-	height: 1px;
 }
 
 .lefty {
@@ -66,6 +69,10 @@ img.lefty {
 
 .righty {
 	float: right;
+}
+
+img.righty {
+	margin-left: 12px;
 }
 
 img.righty {
@@ -413,6 +420,12 @@ ul.dropdown {
 		font-weight: 500;
 	}
 
+	&.button-inverted {
+		background: #f9f9f9;
+		color: #444;
+		border: 3px solid #ececec;
+	}
+
 	&.button-submit {
 		background: #00986a;
 		
@@ -677,11 +690,51 @@ hr {
 	font-weight: 500;
 	text-shadow: $text-shadow;
 
-	.progress-bar-30 {
+	> div {
 		background: #6ea164;
 		padding: 1em;
-		width: 30%;
+	}
 
+
+
+	.progress-bar-10 {
+		width: 10%;
+	}
+	
+	.progress-bar-20 {
+		width: 20%;
+	}
+	
+	.progress-bar-30 {
+		width: 30%;
+	}
+	
+	.progress-bar-40 {
+		width: 40%;
+	}
+	
+	.progress-bar-50 {
+		width: 50%;
+	}
+	
+	.progress-bar-60 {
+		width: 60%;
+	}
+	
+	.progress-bar-70 {
+		width: 70%;
+	}
+	
+	.progress-bar-80 {
+		width: 80%;
+	}
+	
+	.progress-bar-90 {
+		width: 90%;
+	}
+	
+	.progress-bar-100 {
+		width: 100%;
 	}
 
 	&.progress-bar-small {
@@ -851,7 +904,7 @@ section.flatby {
 		padding: 3em 1em;
 		display: block;
 		text-decoration: none;
-		height: 330px;
+		height: 360px;
 
 		&:last-child {
 			border-right: 0px;
@@ -875,6 +928,15 @@ section.flatby {
 			font-size: 0.8em;
 		}
 
+		.button {
+			text-shadow: none;
+			font-weight: 500;
+
+			&:hover {
+				background: #fff;
+			}
+		}
+
 		&:hover {
 			background: $color-background;
 			color: #fff;
@@ -882,5 +944,68 @@ section.flatby {
 	}
 }
 
+
+.date {
+	border-radius: 12px;
+	border: 4px solid #f7f7f7;
+	width: 120px;
+	color: #444;
+	@include box-sizing(border-box);background-image: linear-gradient(bottom, rgb(245,245,245) 35%, rgb(255,255,255) 68%);
+background-image: -o-linear-gradient(bottom, rgb(245,245,245) 35%, rgb(255,255,255) 68%);
+background-image: -moz-linear-gradient(bottom, rgb(245,245,245) 35%, rgb(255,255,255) 68%);
+background-image: -webkit-linear-gradient(bottom, rgb(245,245,245) 35%, rgb(255,255,255) 68%);
+background-image: -ms-linear-gradient(bottom, rgb(245,245,245) 35%, rgb(255,255,255) 68%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.35, rgb(245,245,245)),
+	color-stop(0.68, rgb(255,255,255))
+);
+
+	span {
+		display: block;
+		width: 100%;
+		text-align: center;
+		height: 50px;
+		@include box-sizing(border-box);
+
+		&.month {
+			font-weight: 800;
+			font-size: 12px;
+			padding-left: 10px;
+			text-transform: uppercase;
+			color: #cecece;
+			text-align: left;
+
+			background-image: linear-gradient(bottom, rgb(245,245,245) 0%, rgb(255,255,255) 100%);
+			background-image: -o-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(255,255,255) 100%);
+			background-image: -moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(255,255,255) 100%);
+			background-image: -webkit-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(255,255,255) 100%);
+			background-image: -ms-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(255,255,255) 100%);
+
+			background-image: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				color-stop(0, rgb(245,245,245)),
+				color-stop(1, rgb(255,255,255))
+			);
+		}
+
+		&.day {
+			font-weight: 800;
+			font-size: 72px;
+			position: relative;
+			top: -15px;
+
+		}
+
+		&:first-child {
+			border-bottom: 1px solid #e9e9e9;
+		}
+	}
+}
 
 
