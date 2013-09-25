@@ -838,3 +838,33 @@ section.flatby {
     /* line 1005, ../sass/screen.scss */
     .date span:first-child {
       border-bottom: 1px solid #e9e9e9; }
+
+/* line 1011, ../sass/screen.scss */
+.close {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  text-decoration: none;
+  opacity: 0.5; }
+  /* line 1018, ../sass/screen.scss */
+  .close:hover {
+    opacity: 1; }
+
+/* line 1027, ../sass/screen.scss */
+.flash {
+  position: relative;
+  padding: 1em;
+  border-radius: 4px;
+  color: #fff;
+  background: #303030;
+  text-align: center;
+  margin-bottom: 1em; }
+  /* line 1036, ../sass/screen.scss */
+  .flash p {
+    margin-bottom: 0; }
+  /* line 1040, ../sass/screen.scss */
+  .flash.error {
+    background: #f2594b; }
+  /* line 1044, ../sass/screen.scss */
+  .flash.success {
+    background: #14a19a; }
