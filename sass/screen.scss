@@ -11,6 +11,9 @@ $color-background: #6ea164;
 $primary-text-color: #707070;
 $secondary-text-color: #838383;
 
+$major-height: 24px;
+$minor-height: 12px;
+
 $fonts: "Open Sans", helvetica, arial, sans-serif;
 
 // TO-DO
@@ -26,8 +29,12 @@ body {
 	line-height: 1.75em;
 }
 
-h1, h2, h3 {
-	margin-bottom: 12px;
+h1, h2, h3, h4, h5 {
+	margin-bottom: 1em;
+
+	&.big {
+		font-weight: 900;
+	}
 }
 
 h1 {
@@ -43,12 +50,16 @@ h3 {
 	font-size: 1.2em;
 }
 
+h4 {
+	font-size: 1.1em;
+}
+
 a {
 	color: inherit;
 }
 
 p {
-	margin-bottom: 12px;
+	margin-bottom: 1em;
 }
 
 strong {
@@ -74,11 +85,6 @@ img.lefty {
 img.righty {
 	margin-left: 12px;
 }
-
-img.righty {
-	margin-left: 12px;
-}
-
 
 //
 // Generic Structure Styles
@@ -144,6 +150,7 @@ section, article, .container {
 			opacity: 1;
 			text-transform: uppercase;
 			letter-spacing: 0.2em;
+			margin-bottom: $major-height;
 		}
 
 		h2 {
@@ -186,6 +193,21 @@ body > section, body > header, body > footer, .container {
 
 nav {
 	&.navigation {
+
+		&.big {
+			ul {
+				li {
+					a {
+						padding: 1.5em;
+
+						&.focus {
+							padding: 1.5em;
+						}
+					}
+				}
+			}
+		}
+
 		background: $dark-background;
 		margin-top: 2em;
 		border-radius: 4px;
@@ -375,6 +397,15 @@ ul.dropdown {
 }
 
 //
+// Typography Stuff
+//
+
+.typography {
+	
+}
+
+
+//
 // Buttons & Forms
 //
 
@@ -556,7 +587,6 @@ hr {
 	opacity: 0.2;
 }
 
-
 //
 // Generic site elements (items, featured items, sliders, )
 //
@@ -666,6 +696,10 @@ hr {
 			text-align: center;
 			color: #fff;
 
+			&:hover {
+				background: rgba(0, 0, 0, 0.8);
+			}
+
 			i {
 				position: relative;
 				top: 4px;
@@ -694,8 +728,6 @@ hr {
 		background: #6ea164;
 		padding: 1em;
 	}
-
-
 
 	.progress-bar-10 {
 		width: 10%;
@@ -871,7 +903,6 @@ section.flatby {
 		span {
 			font-weight: 500;
 		}
-
 	}
 
 	h2 {
@@ -944,7 +975,6 @@ section.flatby {
 	}
 }
 
-
 .date {
 	border-radius: 12px;
 	border: 4px solid #f7f7f7;
@@ -999,7 +1029,6 @@ section.flatby {
 			font-size: 72px;
 			position: relative;
 			top: -15px;
-
 		}
 
 		&:first-child {
@@ -1045,5 +1074,7 @@ section.flatby {
 		background: #14a19a;
 	}
 }
+
+
 
 
