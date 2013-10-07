@@ -3,18 +3,27 @@
 
 $text-shadow : 1px 1px 1px rgba(0, 0, 0, 0.2);
 
-$main-background: #edeae9;
-$dark-background: #444;
-
-$color-background: #6ea164;
-
-$primary-text-color: #707070;
-$secondary-text-color: #838383;
-
 $major-height: 24px;
 $minor-height: 12px;
 
 $fonts: "Open Sans", helvetica, arial, sans-serif;
+
+
+// Flatby Color Scheme
+$main-background: #edeae9;
+$dark-background: #444;
+$color-background: #6ea164;
+
+$primary-text-color: #707070;
+$primary-link-color: #ffffff;
+$secondary-text-color: #838383;
+$navigation-link-color: #cecece;
+
+$universal-border-color: #595959;
+$universal-border-color-light: #cdcdcd;
+
+
+
 
 body {
 	font-family: $fonts;
@@ -252,7 +261,7 @@ nav {
 				}
 
 				> a {
-					color: #cecece;
+					color: $navigation-link-color;
 					display: block;
 					font-weight: 500;
 					text-shadow: none;
@@ -273,21 +282,21 @@ nav {
 					&.navigation-home {
 						&:hover {
 							background: #00986a;
-							color: #fff;
+							color: $primary-link-color;
 						}
 					}
 
 					&.navigation-settings {
 						&:hover {
 							background: #00986a;
-							color: #fff;
+							color: $primary-link-color;
 						}
 					}
 
 					&.navigation-user {
 						&:hover {
 							background: #00986a;
-							color: #fff;
+							color: $primary-link-color;
 						}
 					}
 				}
@@ -307,10 +316,10 @@ nav {
 					color: inherit;
 					border: 1px solid rgba(0, 0, 0, 0.0);
 
-					border-bottom: 1px solid #cecece;
+					border-bottom: 1px solid $universal-border-color-light;
 
 					&.active {
-						border: 1px solid #cecece;
+						border: 1px solid $universal-border-color-light;
 						border-bottom: 1px solid rgba(0, 0, 0, 0.0);
 						margin-right: -1px;
 					}
@@ -380,13 +389,16 @@ ul.dropdown {
 	}
 
 	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
 		a {
 			display: block;
 			padding: 0.75em 1em;
-			border-bottom: 1px solid #595959;
+			border-bottom: 1px solid $universal-border-color;
 			text-decoration: none;
-			color: #cecece;
+			color: $navigation-link-color;
 
 			&:hover {
 				background: rgba(0, 0, 0, 0.2);
@@ -963,6 +975,11 @@ section.flatby {
 			width: 60%;
 			margin: 0 auto;
 			font-size: 0.8em;
+
+			li {
+				margin: 0;
+				list-style: none;
+			}
 		}
 
 		.button {
