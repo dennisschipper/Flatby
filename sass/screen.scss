@@ -16,21 +16,17 @@ $minor-height: 12px;
 
 $fonts: "Open Sans", helvetica, arial, sans-serif;
 
-// TO-DO
-// Unifiy all the list/nav crap
-// Proper color schemes
-// Tooltips
-
 body {
 	font-family: $fonts;
 	font-weight: 100;
 	background: $main-background;
 	color: $primary-text-color;
 	line-height: 1.75em;
+	font-size: 1em;
 }
 
 h1, h2, h3, h4, h5 {
-	margin-bottom: 1em;
+	margin-bottom: $minor-height;
 
 	&.big {
 		font-weight: 900;
@@ -84,6 +80,16 @@ img.lefty {
 
 img.righty {
 	margin-left: 12px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding-left: 1em;
+		list-style: inside disc;
+	}
 }
 
 //
