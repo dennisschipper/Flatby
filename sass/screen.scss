@@ -109,7 +109,7 @@ section, article, .container {
 	@include box-sizing(border-box);
 	padding: 2em;
 	background: #fff;
-	border-radius: 4px;
+//	border-radius: 4px;
 	position: relative;
 
 	article {
@@ -225,7 +225,7 @@ nav {
 
 		background: $dark-background;
 		margin-top: 2em;
-		border-radius: 4px;
+	//	border-radius: 4px;
 		
 		> ul {
 			list-style: none;
@@ -638,7 +638,7 @@ hr {
 
 .item-featured {
 	@include box-sizing(border-box);
-	border-radius: 4px;
+//	border-radius: 4px;
 	background: #fff;
 
 	.item-info {
@@ -1079,7 +1079,7 @@ section.flatby {
 .flash {
 	position: relative;
 	padding: 1em;
-	border-radius: 4px;
+//	border-radius: 4px;
 	color: #fff;
 	background: #303030;
 	text-align: center;

@@ -14,3 +14,11 @@ To do (soon):
 
 - Add "fat" styles to elements
 - Rewrite parts of the css to make more sense
+
+Updates
+=======
+
+Added paging
+Added CSS for pagination
+
+Thanks @bootstrap ;)
