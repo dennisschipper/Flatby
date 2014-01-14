@@ -927,13 +927,3 @@ section.flatby {
     position: relative;
     text-decoration: none;
 }
-a {
-    color: #428BCA;
-    text-decoration: none;
-}
-a {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-}
