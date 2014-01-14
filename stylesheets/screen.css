@@ -213,7 +213,7 @@ body > section, body > header, body > footer, .container {
 nav.navigation {
   background: #444444;
   margin-top: 2em;
-  border-radius: 4px; }
+  /* border-radius: 4px; */ }
   /* line 215, ../sass/screen.scss */
   nav.navigation.big ul li a {
     padding: 1.5em; }
