@@ -904,3 +904,36 @@ section.flatby {
   /* line 1096, ../sass/screen.scss */
   .flash.success {
     background: #14a19a; }
+
+/***************/
+/**pagination**/
+/*************/
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+    
+    color: #CECECE;
+    cursor: not-allowed;
+}
+.pagination > li > a, .pagination > li > span {
+    background-color: #FFFFFF;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+a {
+    color: #428BCA;
+    text-decoration: none;
+}
+a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+}
